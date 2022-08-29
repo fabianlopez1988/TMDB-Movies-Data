@@ -8,6 +8,7 @@ const bodyParser = require("body-parser")
 const passport = require("passport");
 const LocalStrategy = require("passport-local").Strategy
 const cors = require("cors")
+const { CORS_URL } = process.env
 
 const models= require("./models") 
 
@@ -51,6 +52,11 @@ app.use(session({
 
 app.use(passport.initialize());
 app.use(passport.session());
+
+app.use((req, res, next) => {
+  res.header("Access-Control-Allow-Origin", CORS_URL);
+  
+})
 
 passport.use(
   new LocalStrategy(
