@@ -1,0 +1,52 @@
+body {
+  margin: 0;
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Oxygen",
+  "Ubuntu", "Cantarell", "Fira Sans", "Helvetica Neue",
+  sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  background-color: #121e2e;
+  color: #ffffff;
+}
+
+
+
+code {
+  font-family: source-code-pro, Menlo, Monaco, Consolas, "Courier New",
+    monospace;
+}
+
+/* .navbarColor {
+  background-color: #464e91;
+  color: white;
+} */
+
+.brand {
+  background-color: #90cea1;
+}
+
+.description {
+  color: #0d253f;
+}
+
+a {
+  text-decoration: none;
+}
+
+/* .movie-info {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 1rem;
+  background-color: #0d253f;
+  color: #90cea1;
+} */
+
+/* //class important */
+/* .moviesGrid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, 230px);
+  gap: 40px;
+  padding: 40px;
+  justify-content: center;
+} */

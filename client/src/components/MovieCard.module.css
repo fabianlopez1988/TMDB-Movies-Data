@@ -1,0 +1,38 @@
+.movieCard{
+    list-style: none;
+    font-size: 1,5rem;
+    text-align: center;
+}
+
+.movieCard:hover {
+    opacity: 0.8 ;
+}
+
+.movieImage{
+    border-radius: 10px;
+    background-color: rgb(0, 0, 0);
+}
+
+.movieImage:hover {
+    -webkit-box-shadow: 5px 5px 15px 5px #000000; 
+    box-shadow: 5px 5px 15px 5px #000000;
+}
+
+
+/* eliminar subrayado titulo */
+.movieTitle {
+    text-decoration: none;  
+    font-size: 1.2rem;
+    padding-top: 5%;
+    color: white;
+
+      
+}
+
+@media (max-width: 560px) {
+    .movieImage{
+        width: 90%;
+        height: auto;
+    }
+}
+
