@@ -6,12 +6,19 @@ import styles from "./MovieDetails.module.css";
 import { GrFavorite } from "react-icons/gr";
 import { useSelector, useDispatch } from "react-redux";
 import { addFavorite, getFavorites, removeFavorite } from "../store/favorites";
+import Alert from "react-bootstrap/Alert";
 
 const MovieDetails = () => {
   const { movie_id } = useParams();
   const [isLoading, setIsLoading] = useState(true);
   const [movie, setMovie] = useState(null);
   const dispatch = useDispatch();
+
+  const [showAlert, setShowAlert] = useState(false);
+
+  // const showAlert = () => {
+  //   alert ("The movie has been successfully added to your list")
+  // }
 
   const user = JSON.parse(localStorage.getItem("user"));
 
@@ -31,12 +38,12 @@ const MovieDetails = () => {
   if (isLoading) {
     return <Spinner />;
   }
-  
 
   if (!movie) return null;
 
   const handleAddFavorite = (movie) => {
     dispatch(addFavorite(movie)).then(() => dispatch(getFavorites()));
+    setShowAlert(true);
   };
 
   return (
@@ -60,7 +67,7 @@ const MovieDetails = () => {
               .join(", ") + "."}
           </p>
         }
-        <p >
+        <p>
           <strong>Description: </strong>
           {movie.overview}
         </p>
@@ -75,6 +82,14 @@ const MovieDetails = () => {
               <GrFavorite onClick={() => handleAddFavorite(movie)} />
             </button>
           ) : null}
+          <Alert
+            variant="success"
+            show={showAlert}
+            onClose={() => setShowAlert(false)}
+            dismissible
+          >
+            <p>"The movie has been successfully added to your list"</p>
+          </Alert>
         </div>
       </div>
     </div>
