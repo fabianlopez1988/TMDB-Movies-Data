@@ -4,7 +4,6 @@
     display: flex;
 }
   
-  
 #logo{
     height: 60px;
     width: auto;
@@ -12,23 +11,13 @@
 
 .navbarLogo{
     width: 100%;
-    padding-left: 100px;
     justify-content: space-between;
     
 }
 
-.span{
-    padding-left: 20px;
-}
-
 .right{
-    display: flex;
-    text-align: center;
-    justify-content: center;
-    padding-right: 100px;
-
- 
-
+    color: black;
+    align-items: center;
 }
 
 .navbar-container{
@@ -37,3 +26,5 @@
     justify-content: space-between;
 
 }
+
+        

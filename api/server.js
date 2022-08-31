@@ -20,7 +20,6 @@ const app = express();
 
 const authAPI = require("./routes");
 
-// const routes = require("./routes")
 
 app.use(express.json());
 

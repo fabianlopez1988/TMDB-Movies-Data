@@ -23,7 +23,46 @@
     font-size: 1.5rem;
 }
 
+
 .firstItem{
     margin-top: 0;
 }
+
+
+@media screen and (max-width:500px) {
+    .movieImage {
+        width: 230px;
+        height: 345px;
+    }
+    .detailsContainer {
+        display: flex;
+        justify-content: center;
+        flex-wrap: wrap;
+        padding-top: 5%;
+    
+    }
+    
+    .col{
+        max-width: 400px;
+        margin: 15px;
+        height: auto;
+        height: 80%;
+    }
+    
+    .movieImage{
+        border-radius: 20px;
+        -webkit-box-shadow: 5px 5px 15px 5px #000000; 
+        box-shadow: 5px 5px 15px 5px #000000;
+    }
+    
+    .movieDetails{
+        font-size: 0.6rem ;
+    }
+    
+    
+    .firstItem{
+        margin-top: 0;
+    }
+}
+
 

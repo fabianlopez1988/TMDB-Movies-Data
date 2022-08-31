@@ -31,6 +31,7 @@ const MovieDetails = () => {
   if (isLoading) {
     return <Spinner />;
   }
+  
 
   if (!movie) return null;
 
@@ -45,7 +46,7 @@ const MovieDetails = () => {
         src={`https://image.tmdb.org/t/p/w600_and_h900_bestv2${movie.poster_path}`}
         alt={movie.title}
       />
-      <div className={`${styles.col} ${styles.MovieDetails}`}>
+      <div className={`${styles.col} ${styles.movieDetails}`}>
         <h2 className={styles.firstItem}>
           <strong>Title: </strong>
           {movie.title}
@@ -59,7 +60,7 @@ const MovieDetails = () => {
               .join(", ") + "."}
           </p>
         }
-        <p>
+        <p >
           <strong>Description: </strong>
           {movie.overview}
         </p>

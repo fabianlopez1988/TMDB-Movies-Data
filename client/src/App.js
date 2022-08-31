@@ -1,11 +1,9 @@
-// import React, { useEffect, useState } from "react";
 import { BrowserRouter, Routes, Route } from "react-router-dom";
 import Login from "./components/Login";
 import Register from "./components/Register";
-// import Home from "./components/Home";
 import MovieDetails from "./pages/MovieDetails";
 import LandingPage from "./pages/LandingPage";
-import Navbar from "./components/Navbar";
+import NavBar from "./components/NavBar";
 import Searcheador from "./components/Searcheador"
 import Favorites from "./components/Favorites";
 
@@ -16,10 +14,8 @@ const App = () => {
   return (
     <BrowserRouter>
       <div>
-        <Navbar />
+        <NavBar />
         <Routes>
-          {/* <Route path="/"  /> */}
-          {/* <Route path="/" element={<Home />}/> */}
           <Route path="/" element={<LandingPage/>} />
           <Route path="/login" element={<Login />} />
           <Route path="/register" element={<Register />} />
