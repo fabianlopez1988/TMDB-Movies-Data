@@ -53,10 +53,9 @@ app.use(session({
 app.use(passport.initialize());
 app.use(passport.session());
 
-app.use((req, res, next) => {
-  res.header("Access-Control-Allow-Origin", CORS_URL);
-  
-})
+// app.use((req, res, next) => {
+//   res.header("Access-Control-Allow-Origin", CORS_URL);
+// })
 
 passport.use(
   new LocalStrategy(
@@ -115,7 +114,7 @@ app.get("/*", (req, res) => {
 const PORT = process.env.PORT || 5000;
 
 db.sync({ force: false }).then(() => {
-  app.listen(PORT, () => console.log(`server listenning on port ${PORT}`));
+  app.listen(PORT, () => console.log(`server listenning on port`, PORT));
 })
 .catch(console.error);
 
