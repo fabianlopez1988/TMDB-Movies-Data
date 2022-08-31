@@ -2,9 +2,9 @@
   "name": "api",
   "version": "1.0.0",
   "description": "",
+  "main": "server.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1",
-    "start": "nodemon server.js"
+    "start": "node server.js"
   },
   "keywords": [],
   "author": "",
@@ -23,7 +23,6 @@
     "sequelize": "^6.20.1"
   },
   "devDependencies": {
-    "concurrently": "^6.4.0",
-    "nodemon": "^2.0.16"
+    "concurrently": "^6.4.0" 
   }
 }
