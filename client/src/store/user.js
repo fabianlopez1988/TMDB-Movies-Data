@@ -2,8 +2,8 @@ import { createAsyncThunk, createReducer } from "@reduxjs/toolkit";
 import axios from "axios";
 
 export const getUser = createAsyncThunk("GET_USER", () => {
-  const userId = JSON.parse(localStorage.getItem('user')).user.id
-  return axios.get(`/api/${userId}`)
+  const userId = JSON.parse(localStorage.getItem('user')).id
+  return axios.get(`/api/users${userId}`)
       .then(user => user.data)
 })
 
